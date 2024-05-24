@@ -1,0 +1,24 @@
+class Jokenpo():
+
+def __init__(self, jogador1, jogador2):
+        self.jogador1 = jogador1
+        self.jogador2 = jogador2
+        self.pontos1 = 0
+        self.pontos2 = 0
+
+    def jogar(self, escolha1, escolha2):
+        if escolha1 == "pedra" and escolha2 == "tesoura" or escolha1 == "tesoura" and escolha2 == "papel" or escolha1 == "papel" and escolha2 == "pedra":
+            print(f"{self.jogador1} venceu a rodada ;)")
+            self.pontos1 += 1
+        elif escolha2 == "pedra" and escolha1 == "tesoura" or escolha2 == "tesoura" and escolha1 == "papel" or escolha2 == "papel" and escolha1 == "pedra":
+            print(f"{self.jogador2} venceu a rodada ;)")
+            self.pontos2 += 1
+        else:
+            print("empate")
+    def resultado(self):
+        if self.pontos1 > self.pontos2:
+            print(f"{self.jogador1} fez mais pontos e venceu a partida")
+        elif self.pontos2 > self.pontos1:
+            print(f"{self.jogador2} fez mais pontos e venceu a partida")
+        elif self.pontos1 == self.pontos2:
+            print("a partida deu empate")
